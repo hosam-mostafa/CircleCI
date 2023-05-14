@@ -6,6 +6,9 @@ jobs:
   print_hello:
     docker:
       - image: circleci/node:13.8.0
+    environment:
+      envTest : << pipeline.id >>
+      envTest2: "ABC"
     steps:
       - run: echo hello
   print_world:
